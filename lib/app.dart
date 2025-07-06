@@ -9,7 +9,7 @@ import 'screens/auth_screen.dart';
 import 'screens/notes_screen.dart';
 
 class NotesApp extends StatelessWidget {
-  const NotesApp({Key? key}) : super(key: key);
+  const NotesApp({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -8,7 +8,7 @@ import '../blocs/notes/notes_state.dart';
 import '../models/note.dart';
 
 class NotesScreen extends StatefulWidget {
-  const NotesScreen({Key? key}) : super(key: key);
+  const NotesScreen({super.key});
 
   @override
   State<NotesScreen> createState() => _NotesScreenState();
@@ -175,11 +175,10 @@ class _NoteDialog extends StatefulWidget {
   final Function(String) onSave;
 
   const _NoteDialog({
-    Key? key,
     required this.title,
     this.initialText,
     required this.onSave,
-  }) : super(key: key);
+  });
 
   @override
   State<_NoteDialog> createState() => _NoteDialogState();
