@@ -4,10 +4,13 @@ import 'firebase_options.dart';
 import 'app.dart';
 
 void main() async {
-  //calling
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  WidgetsFlutterBinding.ensureInitialized(); // must come first
 
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  // Initialize Firebase with the default options for the current platform
+  // This is necessary to ensure that Firebase is set up before the app runs
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const NotesApp());
 }
